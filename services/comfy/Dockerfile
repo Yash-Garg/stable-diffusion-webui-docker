@@ -9,8 +9,11 @@ RUN --mount=type=cache,target=/root/.cache/pip \
   git clone https://github.com/comfyanonymous/ComfyUI.git ${ROOT} && \
   cd ${ROOT} && \
   git checkout master && \
-  git reset --hard 276f8fce9f5a80b500947fb5745a4dde9e84622d && \
+  git reset --hard 5f9d5a244b0c753e8d1dd0975ad3982ffcb16e0f && \
   pip install -r requirements.txt
+
+RUN git clone https://github.com/ltdrdata/ComfyUI-Manager ${ROOT}/custom_nodes/ComfyUI-Manager && \
+  pip install -r ${ROOT}/custom_nodes/ComfyUI-Manager/requirements.txt
 
 WORKDIR ${ROOT}
 COPY . /docker/

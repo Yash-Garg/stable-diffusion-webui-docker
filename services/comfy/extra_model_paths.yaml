@@ -18,6 +18,10 @@ a111:
 
   custom_nodes: config/comfy/custom_nodes
 
+comfyui:
+  base_path: /data
+  diffusion_models: models/unet
+
   # TODO: I am unsure about these, need more testing
   # style_models: config/comfy/style_models
   # t2i_adapter: config/comfy/t2i_adapter
